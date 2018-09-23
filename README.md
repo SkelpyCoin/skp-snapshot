@@ -1,5 +1,5 @@
 # skp-snapshot
-A bash script to automate backups for KAPU blockchain
+A bash script to automate backups for Skelpy blockchain
 v0.3
 
 ##Requisites
