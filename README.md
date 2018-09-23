@@ -34,7 +34,7 @@ Example of output:<br>
 ```
    + Creating snapshot                                
   -------------------------------------------------- 
-  OK snapshot created successfully at block  91005 ( 154 MB).
+  OK snapshot created successfully at block  26583 ( 31 MB).
 ```
 Also will create a line in the log, there you can see your snapshot at what block height was created.<br>
 
@@ -71,8 +71,7 @@ Example of output:<br>
 ```
    + Snapshot Log                                                                  
   --------------------------------------------------                               
-  09-03-2017 - 20:59:06 -- Snapshot created successfully at block  91005 ( 154 MB)  
-  09-03-2017 - 21:36:07 -- Snapshot created successfully at block  91019 ( 154 MB)  
+23-09-2018 - 02:12:37 -- OK snapshot created successfully at block  26583 ( 31 MB). 
   --------------------------------------------------END                            
 ```
 -------------------------------------------------------------
