@@ -1,6 +1,5 @@
 # skp-snapshot
 A bash script to automate backups for Skelpy blockchain
-v0.3
 
 ##Requisites
     - This script works with postgres and skp_db, configured with skp user
