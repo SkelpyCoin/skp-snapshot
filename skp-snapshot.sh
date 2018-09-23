@@ -7,7 +7,7 @@ export LANGUAGE=en_US.UTF-8
 
 echo " "
 
-if [ ! -f ../skp-node/app.js ]; then
+if [ ! -f ../skelpy-node/app.js ]; then
   echo "Error: No skp installation detected. Exiting."
   exit 1
 fi
@@ -54,7 +54,7 @@ function top_level_parent_pid {
 }
 
 function proc_vars {
-        node=`pgrep -a "node" | grep skp-node | awk '{print $1}'`
+        node=`pgrep -a "node" | grep skelpy-node | awk '{print $1}'`
         if [ "$node" == "" ] ; then
                 node=0
         fi
@@ -68,8 +68,8 @@ function proc_vars {
         # Find the top level process of node
         top_lvl=$(top_level_parent_pid $node)
 
-        # Looking for skp-node installations and performing actions
-        skpdir=`locate -b skp-node`
+        # Looking for skelpy-node installations and performing actions
+        skpdir=`locate -b skelpy-node`
 
         # Getting the parent of the install path
         parent=`dirname $skpdir 2>&1`
