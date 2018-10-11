@@ -1,4 +1,4 @@
-# skp-snapshot
+# Skelpy Snapshot Tool
 A bash script to automate backups for Skelpy blockchain
 
 ##Requisites
