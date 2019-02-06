@@ -17,7 +17,7 @@ if [ "\$USER" == "root" ]; then
   exit 1
 fi
 
-DB_NAME="skp_testnet"
+DB_NAME="skp_mainnet"
 DB_USER=$USER
 DB_PASS="password"
 SNAPSHOT_COUNTER=snapshot/counter.json
@@ -112,8 +112,8 @@ create_snapshot() {
 
   echo "            Starting SKELPY Node..."
   cd $skpdir
-  forever start app.js -c ./config.testnet.json -g ./genesisBlock.testnet.json >&- 2>&-
-  #forever start app.js --genesis genesisBlock.testnet.json --config config.testnet.json >&- 2>&-
+  forever start app.js -c ./config.mainnet.json -g ./genesisBlock.mainnet.json >&- 2>&-
+  #forever start app.js --genesis genesisBlock.mainnet.json --config config.mainnet.json >&- 2>&-
   echo "    ✔ SKELPY Node was successfully started"
 
 
@@ -137,7 +137,7 @@ restore_snapshot(){
     #snapshot restoring..
     export PGPASSWORD=$DB_PASS
    
-    pg_restore -O -j 8 -d skp_testnet  $SNAPSHOT_FILE 2>/dev/null
+    pg_restore -O -j 8 -d skp_mainnet  $SNAPSHOT_FILE 2>/dev/null
     #pg_restore -d $DB_NAME "$SNAPSHOT_FILE" -U $DB_USER -h localhost -c -n public
 
     echo "OK snapshot restored successfully."
@@ -145,8 +145,8 @@ restore_snapshot(){
   
 
   cd $skpdir
-  forever start app.js -c ./config.testnet.json -g ./genesisBlock.testnet.json >&- 2>&-
-  #forever start app.js --genesis genesisBlock.testnet.json --config config.testnet.json >&- 2>&-
+  forever start app.js -c ./config.mainnet.json -g ./genesisBlock.mainnet.json >&- 2>&-
+  #forever start app.js --genesis genesisBlock.mainnet.json --config config.mainnet.json >&- 2>&-
   echo "    ✔ SKELPY Node was successfully started"
 }
 
